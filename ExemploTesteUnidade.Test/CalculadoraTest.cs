@@ -32,5 +32,31 @@ namespace ExemploTesteUnidade.Test
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void DeveSubtrairOnzeDeVinteEResultadoDeveSerNove()
+        {
+            var target = new Calculadora();
+
+            decimal expected = 9;
+            decimal actual = 0;
+
+            actual = target.Subtrair(20, 11);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void DeveSubtrairTresDeSeteEResultadoDeveSerQuatro()
+        {
+            var target = new Calculadora();
+
+            decimal expected = 4;
+            decimal actual = 0;
+
+            actual = target.Subtrair(7, 3);
+
+            Assert.AreEqual(expected, actual);
+        }
+
     }
 }

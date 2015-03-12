@@ -5,27 +5,27 @@ namespace ExemploTesteUnidade
     public class Calculadora
     {
 
-        public decimal Somar(decimal primeiroValor, decimal segundoValor)
+        public decimal Somar(decimal a, decimal b)
         {
-            return primeiroValor + segundoValor;
+            return a + b;
         }
 
-        public decimal Subtrair(decimal primeiroValor, decimal segundoValor)
+        public decimal Subtrair(decimal a, decimal b)
         {
-            return primeiroValor - segundoValor;
+            return a - b;
         }
 
-        public decimal Multiplicar(decimal primeiroValor, decimal segundoValor)
+        public decimal Multiplicar(decimal a, decimal b)
         {
-            return primeiroValor * segundoValor;
+            return a * b;
         }
 
-        public decimal Dividir(decimal primeiroValor, decimal segundoValor)
+        public decimal Dividir(decimal a, decimal b)
         {
-            if (segundoValor == 0)
-                throw new ArgumentException("Valor do parâmetro inválido.", "segundoValor");
+            if (b == 0)
+                throw new ArgumentException("Valor do parâmetro inválido.", "b");
 
-            return primeiroValor / segundoValor;
+            return a / b;
         }
 
     }
