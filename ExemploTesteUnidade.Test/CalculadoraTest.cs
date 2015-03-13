@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace ExemploTesteUnidade.Test
 {
@@ -78,6 +79,35 @@ namespace ExemploTesteUnidade.Test
             actual = target.Multiplicar(4, 7);
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void DeveDividirOitoPorDoisEResultadoDeveSerQuatro()
+        {
+            decimal expected = 4;
+            decimal actual = 0;
+
+            actual = target.Dividir(8, 2);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void DeveDividirODezoitoPorSeisEResultadoDeveSerTres()
+        {
+            decimal expected = 3;
+            decimal actual = 0;
+
+            actual = target.Dividir(18, 6);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void DeveLancarExcecaoAoDividirQualquerNumeroPorZero()
+        {
+            target.Dividir(10, 0);
         }
 
     }
