@@ -6,11 +6,17 @@ namespace ExemploTesteUnidade.Test
     public class CalculadoraTest
     {
 
+        private Calculadora target;
+
+        [TestInitialize]
+        public void IniciarTestes()
+        {
+            target = new Calculadora();
+        }
+
         [TestMethod]
         public void DeveSomarDezComCincoEResultadoDeveSerQuinze()
         {
-            var target = new Calculadora();
-
             decimal expected = 15;
             decimal actual = 0;
 
@@ -22,8 +28,6 @@ namespace ExemploTesteUnidade.Test
         [TestMethod]
         public void DeveSomarVinteComQuinzeEResultadoDeveSerTrintaECinco()
         {
-            var target = new Calculadora();
-
             decimal expected = 35;
             decimal actual = 0;
 
@@ -35,8 +39,6 @@ namespace ExemploTesteUnidade.Test
         [TestMethod]
         public void DeveSubtrairOnzeDeVinteEResultadoDeveSerNove()
         {
-            var target = new Calculadora();
-
             decimal expected = 9;
             decimal actual = 0;
 
@@ -48,12 +50,32 @@ namespace ExemploTesteUnidade.Test
         [TestMethod]
         public void DeveSubtrairTresDeSeteEResultadoDeveSerQuatro()
         {
-            var target = new Calculadora();
-
             decimal expected = 4;
             decimal actual = 0;
 
             actual = target.Subtrair(7, 3);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void DeveMultiplicarCincoPorTresEResultadoDeveSerQuinze()
+        {
+            decimal expected = 15;
+            decimal actual = 0;
+
+            actual = target.Multiplicar(5, 3);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void DeveMultiplicarQuatroPorSeteEResultadoDeveSerVinteEOito()
+        {
+            decimal expected = 28;
+            decimal actual = 0;
+
+            actual = target.Multiplicar(4, 7);
 
             Assert.AreEqual(expected, actual);
         }
