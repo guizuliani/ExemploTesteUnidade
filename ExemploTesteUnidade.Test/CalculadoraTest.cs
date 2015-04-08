@@ -16,7 +16,7 @@ namespace ExemploTesteUnidade.Test
         }
 
         [TestMethod]
-        public void DeveSomarDezComCincoEResultadoDeveSerQuinze()
+        public void Somar_DeveSomar10Com5_ResultadoDeveSer15()
         {
             decimal expected = 15;
             decimal actual = 0;
@@ -27,7 +27,7 @@ namespace ExemploTesteUnidade.Test
         }
 
         [TestMethod]
-        public void DeveSomarVinteComQuinzeEResultadoDeveSerTrintaECinco()
+        public void Somar_DeveSomar20Com15_ResultadoDeveSer35()
         {
             decimal expected = 35;
             decimal actual = 0;
@@ -38,7 +38,7 @@ namespace ExemploTesteUnidade.Test
         }
 
         [TestMethod]
-        public void DeveSubtrairOnzeDeVinteEResultadoDeveSerNove()
+        public void Subtrair_DeveSubtrair11De20_ResultadoDeveSer9()
         {
             decimal expected = 9;
             decimal actual = 0;
@@ -49,7 +49,7 @@ namespace ExemploTesteUnidade.Test
         }
 
         [TestMethod]
-        public void DeveSubtrairTresDeSeteEResultadoDeveSerQuatro()
+        public void Subtrair_DeveSubtrair3De7_ResultadoDeveSer4()
         {
             decimal expected = 4;
             decimal actual = 0;
@@ -60,7 +60,7 @@ namespace ExemploTesteUnidade.Test
         }
 
         [TestMethod]
-        public void DeveMultiplicarCincoPorTresEResultadoDeveSerQuinze()
+        public void Multiplicar_DeveMultiplicar5Por3_ResultadoDeveSer15()
         {
             decimal expected = 15;
             decimal actual = 0;
@@ -71,7 +71,7 @@ namespace ExemploTesteUnidade.Test
         }
 
         [TestMethod]
-        public void DeveMultiplicarQuatroPorSeteEResultadoDeveSerVinteEOito()
+        public void Multiplicar_DeveMultiplicar4Por7_ResultadoDeveSer28()
         {
             decimal expected = 28;
             decimal actual = 0;
@@ -82,7 +82,7 @@ namespace ExemploTesteUnidade.Test
         }
 
         [TestMethod]
-        public void DeveDividirOitoPorDoisEResultadoDeveSerQuatro()
+        public void Dividir_DeveDividir8Por2_ResultadoDeveSer4()
         {
             decimal expected = 4;
             decimal actual = 0;
@@ -93,7 +93,7 @@ namespace ExemploTesteUnidade.Test
         }
 
         [TestMethod]
-        public void DeveDividirODezoitoPorSeisEResultadoDeveSerTres()
+        public void Dividir_DeveDividir18Por6_ResultadoDeveSer3()
         {
             decimal expected = 3;
             decimal actual = 0;
@@ -105,7 +105,7 @@ namespace ExemploTesteUnidade.Test
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
-        public void DeveLancarExcecaoAoDividirQualquerNumeroPorZero()
+        public void Dividir_Dividir10Por0_ResultadoDeveSerArgumentException()
         {
             target.Dividir(10, 0);
         }
